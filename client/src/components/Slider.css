@@ -1,0 +1,14 @@
+.progress-item {
+  flex: 0 0 1.5rem;
+  min-width: 1.5rem;
+  height: 0.5rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.progress-item.active {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* .arrow:hover ~ .progress {
+  opacity: 1;
+} */
