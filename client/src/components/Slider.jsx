@@ -190,10 +190,6 @@ const Slider = () => {
   };
 
   const moveSlides = () => {
-    // console.log(
-    //   `Value of slideIndex inside this "moveSlides" function is : ${slideIndex}`
-    // );
-
     wrapperRef.current.style.transform = `translateX(-${slideIndex * 100}vw)`;
   };
 
