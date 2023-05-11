@@ -1,11 +1,11 @@
 import Header from "./components/Header";
-import Slider from "./components/Slider";
+import Banner from "./components/Banner";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Slider />
+      <Banner />
     </div>
   );
 }

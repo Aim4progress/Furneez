@@ -1,4 +1,4 @@
-const sliderItems = [
+const bannerItems = [
   {
     img: "./blue-sofa-chair.jpg",
     title: "SUMMER SALE",
@@ -32,8 +32,8 @@ const sliderItems = [
 ];
 
 // Clone 1st and last object
-sliderItems.push(sliderItems[0]);
-sliderItems.unshift(sliderItems[sliderItems.length - 2]);
+bannerItems.push(bannerItems[0]);
+bannerItems.unshift(bannerItems[bannerItems.length - 2]);
 
 const dealsItems = [
   {
@@ -114,4 +114,4 @@ const dealsItems = [
     discount: "40%",
   },
 ];
-export const modifiedSliderItems = sliderItems;
+export const modifiedBannerItems = bannerItems;

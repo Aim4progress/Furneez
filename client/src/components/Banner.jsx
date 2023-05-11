@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { useEffect, useState, useRef, useReducer } from "react";
-import { modifiedSliderItems } from "../data";
-import "./Slider.css";
+import { modifiedBannerItems } from "../data";
+import "./Banner.css";
 
 const Container = styled.div`
   width: 100%;
@@ -143,7 +143,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-const Slider = () => {
+const Banner = () => {
   const [slideIndex, setSlideIndex] = useState(1);
   let isMoving = false;
 
@@ -151,14 +151,14 @@ const Slider = () => {
 
   const wrapperRef = useRef();
   const progressBarRef = useRef();
-  const sliderLen = modifiedSliderItems.length;
+  const sliderLen = modifiedBannerItems.length;
 
   const calculateProgressBar = (progressBarRef) => {
     // Setting the text content of the Progress element to an empty string (which will clear everything out)
     progressBarRef.current.innerText = "";
 
     // Calculate and store the number of actual items in the Overall Slider
-    const itemCount = modifiedSliderItems.length - 2;
+    const itemCount = modifiedBannerItems.length - 2;
 
     // Get the value of  -items-per-screen  variable  that we defined earlier in the CSS
 
@@ -235,11 +235,11 @@ const Slider = () => {
     isMoving = false;
     if (slideIndex === 0) {
       wrapperRef.current.style.transition = "none";
-      setSlideIndex(modifiedSliderItems.length - 2);
+      setSlideIndex(modifiedBannerItems.length - 2);
       moveSlides();
     }
 
-    if (slideIndex === modifiedSliderItems.length - 1) {
+    if (slideIndex === modifiedBannerItems.length - 1) {
       wrapperRef.current.style.transition = "none";
       setSlideIndex(1);
       moveSlides();
@@ -263,7 +263,7 @@ const Slider = () => {
         ref={wrapperRef}
         id="wrapper"
       >
-        {modifiedSliderItems.map((item, index) => (
+        {modifiedBannerItems.map((item, index) => (
           <Slide key={index} bg={item.bg}>
             <ImgContainer>
               <Image src={item.img}></Image>
@@ -288,4 +288,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default Banner;
